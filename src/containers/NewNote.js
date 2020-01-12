@@ -1,5 +1,5 @@
 import { API } from 'aws-amplify'
-import React, { useRef, useState, createContext } from 'react'
+import React, { useRef, useState } from 'react'
 import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
 import LoaderButton from '../components/LoaderButton'
 import config from '../config'
@@ -37,7 +37,7 @@ export default function NewNote (props) {
       await createNote({ content, attachment })
       props.history.push('/')
     } catch (error) {
-      alert(e)
+      alert(error)
     } finally {
       setIsLoading(false)
     }
