@@ -16,7 +16,7 @@ export default function NewNote (props) {
   }
 
   function handleFileChange (event) {
-    file.current = event.target.file[0]
+    file.current = event.target.files[0]
   }
 
   async function handleSubmit (event) {
