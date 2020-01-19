@@ -60,7 +60,7 @@ export default function Signup (props) {
       props.userHasAuthenticated(true)
       props.history.push('/')
     } catch (e) {
-      alert(e.message)
+      console.error(e.message)
       setIsLoading(false)
     }
   }

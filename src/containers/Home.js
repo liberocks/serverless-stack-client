@@ -16,7 +16,7 @@ export default function Home (props) {
         const notes = await loadNotes()
         setNotes(notes)
       } catch (error) {
-        alert(error)
+        console.error(error)
       }
 
       setIsLoading(false)

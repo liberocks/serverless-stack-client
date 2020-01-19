@@ -59,10 +59,7 @@ export default function Notes (props) {
     event.preventDefault()
 
     if (file.current && file.current.size > config.MAX_ATTACHMENT_SIZE) {
-      alert(
-        `Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE /
-        1000000} MB.`
-      )
+      alert(`Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE / 1000000} MB.`)
       return
     }
 
@@ -79,7 +76,7 @@ export default function Notes (props) {
       })
       props.history.push('/')
     } catch (e) {
-      alert(e)
+      console.error(e)
       setIsLoading(false)
     }
   }
@@ -105,7 +102,7 @@ export default function Notes (props) {
       await deleteNote()
       props.history.push('/')
     } catch (e) {
-      alert(e)
+      console.error(e)
       setIsDeleting(false)
     }
   }

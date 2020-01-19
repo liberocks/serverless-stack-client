@@ -37,7 +37,7 @@ export default function NewNote (props) {
       await createNote({ content, attachment })
       props.history.push('/')
     } catch (error) {
-      alert(error)
+      console.error(error)
     } finally {
       setIsLoading(false)
     }

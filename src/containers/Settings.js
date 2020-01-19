@@ -16,7 +16,7 @@ export default function Settings (props) {
 
   async function handleFormSubmit (storage, { token, error }) {
     if (error) {
-      alert(error)
+      console.error(error)
       return
     }
 
@@ -31,7 +31,7 @@ export default function Settings (props) {
       alert('Your card has been charged successfully!')
       props.history.push('/')
     } catch (e) {
-      alert(e)
+      console.error(e)
       setIsLoading(false)
     }
   }
