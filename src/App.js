@@ -20,7 +20,7 @@ function App (props) {
       await Auth.currentSession()
       userHasAuthenticated(true)
     } catch (e) {
-      if (e !== 'No current user') (e)
+      if (e !== 'No current user') console.error(e)
     }
 
     setIsAuthenticating(false)
