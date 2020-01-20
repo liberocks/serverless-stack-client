@@ -24,9 +24,8 @@ export default function Login (props) {
     try {
       await Auth.signIn(fields.email, fields.password)
       props.userHasAuthenticated(true)
-      props.history.push('/')
     } catch (e) {
-      alert(e.message)
+      console.error(e.message)
       setIsLoading(false)
     }
   }
